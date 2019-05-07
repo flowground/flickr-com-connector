@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "api_key": {
+            "required": true,
+            "type": "string"
+        },
+        "user_id": {
+            "required": true,
+            "type": "string"
+        },
+        "page": {
+            "type": "number"
+        },
+        "per_page": {
+            "type": "number"
+        }
+    }
+}

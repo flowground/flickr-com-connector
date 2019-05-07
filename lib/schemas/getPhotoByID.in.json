@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "api_key": {
+            "required": true,
+            "type": "string"
+        },
+        "photo_id": {
+            "required": true,
+            "type": "string",
+            "pattern": "^[0-9]+$"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "api_key": {
+            "required": true,
+            "type": "string"
+        },
+        "group_id": {
+            "required": false,
+            "type": "string",
+            "pattern": "^([0-9]+@N[0-9]+)|([0-9a-zA-Z-_]+)$"
+        },
+        "group_path_alias": {
+            "required": false,
+            "type": "string"
+        },
+        "lang": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

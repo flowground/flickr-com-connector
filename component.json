@@ -1,0 +1,459 @@
+{
+    "title": "Flickr API Schema",
+    "description": "A subset of Flickr's API defined in Swagger format.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/flickr.com/1.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.flickr.com/services",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "getAccessToken": {
+            "main": "./lib/actions/getAccessToken.js",
+            "title": "Returns an access token",
+            "description": "Returns an access token",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAccessToken.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRequestToken": {
+            "main": "./lib/actions/getRequestToken.js",
+            "title": "Returns an oauth token and oauth token secret",
+            "description": "Returns an oauth token and oauth token secret",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRequestToken.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getFavoritesContextByID": {
+            "main": "./lib/actions/getFavoritesContextByID.js",
+            "title": "Returns next and previous favorites for a photo in a user's favorites",
+            "description": "Returns next and previous favorites for a photo in a user's favorites",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getFavoritesContextByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getFavoritesByPersonID": {
+            "main": "./lib/actions/getFavoritesByPersonID.js",
+            "title": "Returns a list of the user's favorite photos. Only photos which the calling user has permission to see are returned.",
+            "description": "Returns a list of the user's favorite photos. Only photos which the calling user has permission to see are returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getFavoritesByPersonID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGalleryPhotosByID": {
+            "main": "./lib/actions/getGalleryPhotosByID.js",
+            "title": "Returns a list of photos in a gallery.",
+            "description": "Returns a list of photos in a gallery.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGalleryPhotosByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGroupTopicRepliesByID": {
+            "main": "./lib/actions/getGroupTopicRepliesByID.js",
+            "title": "Get information on a group topic reply",
+            "description": "Get information on a group topic reply",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGroupTopicRepliesByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGroupTopicByID": {
+            "main": "./lib/actions/getGroupTopicByID.js",
+            "title": "Get information about a group discussion topic",
+            "description": "Get information about a group discussion topic",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGroupTopicByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGroupDiscussionsByID": {
+            "main": "./lib/actions/getGroupDiscussionsByID.js",
+            "title": "Get a list of discussion topics in a group.",
+            "description": "Get a list of discussion topics in a group.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGroupDiscussionsByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGroupByID": {
+            "main": "./lib/actions/getGroupByID.js",
+            "title": "Get information about a group",
+            "description": "Get information about a group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGroupByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_method_flickr_groups_pools_getContext": {
+            "main": "./lib/actions/get_rest_method_flickr_groups_pools_getContext.js",
+            "title": "Returns next and previous photos for a photo in a group pool",
+            "description": "Returns next and previous photos for a photo in a group pool",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_method_flickr_groups_pools_getContext.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_method_flickr_groups_pools_getPhotos": {
+            "main": "./lib/actions/get_rest_method_flickr_groups_pools_getPhotos.js",
+            "title": "Returns a list of pool photos for a given group",
+            "description": "Returns a list of pool photos for a given group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_method_flickr_groups_pools_getPhotos.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPersonByID": {
+            "main": "./lib/actions/getPersonByID.js",
+            "title": "Returns a person",
+            "description": "Returns a person",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPersonByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getMediaByPersonID": {
+            "main": "./lib/actions/getMediaByPersonID.js",
+            "title": "Return photos from the given user's photostream",
+            "description": "Return photos from the given user's photostream",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getMediaByPersonID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPhotolistContextByID": {
+            "main": "./lib/actions/getPhotolistContextByID.js",
+            "title": "Returns next and previous photos in a photo list",
+            "description": "Returns next and previous photos in a photo list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPhotolistContextByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPhotostreamContextByID": {
+            "main": "./lib/actions/getPhotostreamContextByID.js",
+            "title": "Returns next and previous photos for a photo in a photostream",
+            "description": "Returns next and previous photos for a photo in a photostream",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPhotostreamContextByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPhotoExifByID": {
+            "main": "./lib/actions/getPhotoExifByID.js",
+            "title": "Retrieves a list of EXIF/TIFF/GPS tags for a given photo. The calling user must have permission to view the photo.",
+            "description": "Retrieves a list of EXIF/TIFF/GPS tags for a given photo. The calling user must have permission to view the photo.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPhotoExifByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPhotoByID": {
+            "main": "./lib/actions/getPhotoByID.js",
+            "title": "Returns a photo",
+            "description": "Returns a photo",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPhotoByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPhotoSizesByID": {
+            "main": "./lib/actions/getPhotoSizesByID.js",
+            "title": "Returns photo sizes",
+            "description": "Returns photo sizes",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPhotoSizesByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getLicenseByID": {
+            "main": "./lib/actions/getLicenseByID.js",
+            "title": "Fetches a list of available photo licenses for Flickr",
+            "description": "Fetches a list of available photo licenses for Flickr",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getLicenseByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getMediaBySearch": {
+            "main": "./lib/actions/getMediaBySearch.js",
+            "title": "Return a list of photos matching some criteria.",
+            "description": "Return a list of photos matching some criteria.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getMediaBySearch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getAlbumContextByID": {
+            "main": "./lib/actions/getAlbumContextByID.js",
+            "title": "Returns next and previous photos for a photo in a set",
+            "description": "Returns next and previous photos for a photo in a set",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAlbumContextByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getAlbumsByPersonID": {
+            "main": "./lib/actions/getAlbumsByPersonID.js",
+            "title": "Returns the albums belonging to the specified user",
+            "description": "Returns the albums belonging to the specified user",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAlbumsByPersonID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getAlbumByID": {
+            "main": "./lib/actions/getAlbumByID.js",
+            "title": "Returns a list of photos in an album.",
+            "description": "Returns a list of photos in an album.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAlbumByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "echo": {
+            "main": "./lib/actions/echo.js",
+            "title": "Echos the input parameters back in the response",
+            "description": "Echos the input parameters back in the response",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/echo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "uploadPhoto": {
+            "main": "./lib/actions/uploadPhoto.js",
+            "title": "Uploads a new photo to Flickr",
+            "description": "Uploads a new photo to Flickr",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/uploadPhoto.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

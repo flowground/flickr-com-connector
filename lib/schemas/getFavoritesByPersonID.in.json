@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "api_key": {
+            "required": true,
+            "type": "string"
+        },
+        "user_id": {
+            "required": true,
+            "type": "string"
+        },
+        "min_fave_date": {
+            "type": "number"
+        },
+        "max_fave_date": {
+            "type": "number"
+        },
+        "page": {
+            "type": "number"
+        },
+        "per_page": {
+            "type": "number"
+        }
+    }
+}

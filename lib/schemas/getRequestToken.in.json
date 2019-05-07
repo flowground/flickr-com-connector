@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "oauth_consumer_key": {
+            "required": true,
+            "type": "string"
+        },
+        "oauth_nonce": {
+            "required": true,
+            "type": "string"
+        },
+        "oauth_timestamp": {
+            "required": true,
+            "type": "string",
+            "pattern": "^[0-9]+$"
+        },
+        "oauth_signature_method": {
+            "required": true,
+            "type": "string"
+        },
+        "oauth_version": {
+            "required": true,
+            "type": "string"
+        },
+        "oauth_signature": {
+            "required": true,
+            "type": "string"
+        },
+        "oauth_callback": {
+            "required": true,
+            "type": "string",
+            "pattern": "^http.*$"
+        }
+    }
+}

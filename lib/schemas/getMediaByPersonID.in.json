@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "api_key": {
+            "required": true,
+            "type": "string"
+        },
+        "user_id": {
+            "required": true,
+            "type": "string"
+        },
+        "safe_search": {
+            "type": "number"
+        },
+        "min_upload_date": {
+            "type": "number"
+        },
+        "max_upload_date": {
+            "type": "number"
+        },
+        "min_taken_date": {
+            "type": "number"
+        },
+        "max_taken_date": {
+            "type": "number"
+        },
+        "content_type": {
+            "type": "number"
+        },
+        "privacy_filter": {
+            "type": "number"
+        },
+        "page": {
+            "type": "number"
+        },
+        "per_page": {
+            "type": "number"
+        }
+    }
+}

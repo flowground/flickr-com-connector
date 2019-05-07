@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "api_key": {
+            "required": true,
+            "type": "string"
+        },
+        "echo": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

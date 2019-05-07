@@ -1,0 +1,105 @@
+{
+    "type": "object",
+    "properties": {
+        "api_key": {
+            "required": true,
+            "type": "string"
+        },
+        "text": {
+            "type": "string"
+        },
+        "tags": {
+            "type": "string"
+        },
+        "user_id": {
+            "type": "string"
+        },
+        "min_upload_date": {
+            "type": "string"
+        },
+        "max_upload_date": {
+            "type": "string"
+        },
+        "min_taken_date": {
+            "type": "string"
+        },
+        "max_taken_date": {
+            "type": "string"
+        },
+        "license": {
+            "type": "string"
+        },
+        "sort": {
+            "type": "string"
+        },
+        "privacy_filter": {
+            "type": "number"
+        },
+        "bbox": {
+            "type": "string"
+        },
+        "accuracy": {
+            "type": "string"
+        },
+        "safe_search": {
+            "type": "number"
+        },
+        "content_type": {
+            "type": "number"
+        },
+        "machine_tags": {
+            "type": "string"
+        },
+        "machine_tag_mode": {
+            "type": "string"
+        },
+        "group_id": {
+            "type": "string"
+        },
+        "contacts": {
+            "type": "string"
+        },
+        "woe_id": {
+            "type": "string"
+        },
+        "place_id": {
+            "type": "string"
+        },
+        "media": {
+            "type": "string"
+        },
+        "has_geo": {
+            "type": "string"
+        },
+        "geo_context": {
+            "type": "string"
+        },
+        "lat": {
+            "type": "string"
+        },
+        "lon": {
+            "type": "string"
+        },
+        "radius": {
+            "type": "number"
+        },
+        "radius_units": {
+            "type": "string"
+        },
+        "is_commons": {
+            "type": "boolean"
+        },
+        "in_gallery": {
+            "type": "boolean"
+        },
+        "is_getty": {
+            "type": "boolean"
+        },
+        "per_page": {
+            "type": "number"
+        },
+        "page": {
+            "type": "number"
+        }
+    }
+}
